@@ -1,0 +1,6 @@
+.*
+!.gitignore
+!.scalafmt.conf
+**/project/project
+project/target
+target

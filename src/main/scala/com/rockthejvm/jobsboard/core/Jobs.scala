@@ -178,7 +178,7 @@ class LiveJobs[F[_]: MonadCancelThrow: Logger] private (xa: Transactor[F]) exten
         .query[Job]
         .to[List]
         .transact(xa)
-        .logError(e => s"Failed qeury: ${e.getMessage}")
+        .logError(e => s"Failed query: ${e.getMessage}")
   }
 
   override def find(id: UUID): F[Option[Job]] =
